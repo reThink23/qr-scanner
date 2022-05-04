@@ -53,6 +53,9 @@ export class ActionService {
         } else if (uppercaseResult.startsWith('HTTP://') || uppercaseResult.startsWith('HTTPS://')) {
             type = ActionType.URL;
             dataType = DataType.URL;
+        } else if (uppercaseResult.startsWith('GEO:') || uppercaseResult.startsWith('GEO:')) {
+            type = ActionType.GEO;
+            dataType = DataType.GEO;
         }
 
         return from(this.dbService.add(QR_DB_STORE, new QR(QrType.SCANNED, type, dataType, resultString)));
@@ -77,6 +80,9 @@ export class ActionService {
             case DataType.MAILTO:
                 window.location.href = qr.data;
                 break;
+            case DataType.GEO:
+                window.open(this.getGeoURL(qr.data), '_blank')
+                break;
             case DataType.URL:
                 window.open(qr.data, '_blank');
                 break;
@@ -87,4 +93,11 @@ export class ActionService {
         const blob = new Blob([data], {type});
         this.fileSaverService.save(blob, filename, type);
     }
+
+    private getGeoURL(data: string): string {
+        let location = data.split(":")[1];
+        let lolat = location.includes("?")? location.split("?")[0] : location;
+        return `https://www.google.com/maps/places/${lolat}`;
+    }
+
 }

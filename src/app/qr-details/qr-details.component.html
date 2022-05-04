@@ -26,6 +26,7 @@
             <app-event-details *ngSwitchCase="ActionType.EVENT" [qr]="qr"></app-event-details>
             <app-phone-details *ngSwitchCase="ActionType.PHONE" [qr]="qr"></app-phone-details>
             <app-text-details *ngSwitchCase="ActionType.TEXT" [qr]="qr"></app-text-details>
+            <app-text-details *ngSwitchCase="ActionType.GEO" [qr]="qr"></app-text-details>
             <app-wifi-details *ngSwitchCase="ActionType.WIFI" [qr]="qr"></app-wifi-details>
             <app-url-details *ngSwitchCase="ActionType.URL" [qr]="qr"></app-url-details>
         </ng-container>

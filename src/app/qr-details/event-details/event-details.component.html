@@ -23,8 +23,7 @@
             </ion-row>
             <ion-row>
                 <ion-col>
-                    <ion-text class="details-text"><span class="details-text-with-line-breaks"
-                                                         [innerHTML]="event.description"></span></ion-text>
+                    <ion-text class="details-text"><span class="details-text-with-line-breaks" [innerHTML]="event.description"></span></ion-text>
                 </ion-col>
             </ion-row>
         </ion-grid>
@@ -54,7 +53,7 @@
             </ion-row>
             <ion-row>
                 <ion-col>
-                    <ion-text class="details-text">{{event.start | date: 'dd/MM/yyyy'}}</ion-text>
+                    <ion-text class="details-text">{{event.start | date: 'HH:mm dd/MM/yyyy'}}</ion-text>
                 </ion-col>
             </ion-row>
         </ion-grid>
@@ -69,7 +68,7 @@
             </ion-row>
             <ion-row>
                 <ion-col>
-                    <ion-text class="details-text">{{event.end | date: 'dd/MM/yyyy'}}</ion-text>
+                    <ion-text class="details-text">{{event.end | date: 'HH:mm dd/MM/yyyy'}}</ion-text>
                 </ion-col>
             </ion-row>
         </ion-grid>

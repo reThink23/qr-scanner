@@ -58,6 +58,8 @@ export class QrDetailsComponent extends AbstractHistoryAwareComponent implements
                 return 'Send sms';
             case ActionType.WIFI:
                 return 'Open settings';
+            case ActionType.GEO:
+                return 'Open in Google Maps';
             case ActionType.TEXT:
             default:
                 return '';

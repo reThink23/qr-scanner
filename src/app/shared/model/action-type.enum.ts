@@ -6,5 +6,6 @@ export enum ActionType {
     PHONE = 'phone',
     TEXT = 'text',
     WIFI = 'wifi',
-    URL = 'url'
+    URL = 'url',
+    GEO = 'geo'
 }

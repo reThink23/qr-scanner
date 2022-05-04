@@ -10,6 +10,9 @@
     "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "tslib" : ["node_modules/tslib/tslib.d.ts"]
+    },
     "target": "es2015",
     "lib": [
       "es2018",

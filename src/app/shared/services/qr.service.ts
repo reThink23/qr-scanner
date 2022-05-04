@@ -95,6 +95,8 @@ export class QrService {
                 return 'wifi-outline';
             case ActionType.URL:
                 return 'earth-outline';
+            case ActionType.GEO:
+                return 'location-outline';
             case ActionType.TEXT:
             default:
                 return 'document-text-outline';
